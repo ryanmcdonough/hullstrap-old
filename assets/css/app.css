@@ -32,3 +32,10 @@
 h1,h2,h3,h4,h5 {
 	font-family: 'Open Sans', sans-serif;
 }
+
+.hullstrap-compact hr {
+  margin: 5px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}

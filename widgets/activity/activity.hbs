@@ -1,0 +1,91 @@
+<div class="hull-pager">
+  <hr />
+    <div class="pagination">
+      <ul>
+        <li><a href="#" data-hull-action="previousPage">&larr; Previous</a></li>
+        <li><a href="#" data-hull-action="nextPage">Next &rarr;</a></li>
+      </ul>
+    </div>
+  <hr />
+  <div class="hull-pager__query">
+  <h4>For debug</h4>
+  <hr />
+      <span>{{query.page}}</span>
+      <span>VERB ?: {{query.where.verb}}</span>
+      <span>ObjectType ?: {{query.where.obj_type}}</span>
+      <pre>{{json query}}</pre>
+  </div>
+</div>
+
+<ul class="hull-activity">
+  {{#activities}}
+    <li class="hull-media hull-activity__item hull-activity__item--{{verb}}">
+      {{#if actor.picture}}
+        <div class="hull-media__img">
+            <img src="{{actor.picture}}"/>
+        </div>
+      {{/if}}
+      <div class="hull-media__body">
+
+        <h3 class="hull-activity__summary">
+          <span class="hull-activity__summary__actor">{{actor.name}}</span>
+          <span class="hull-activity__summary__verb">{{verb}}</span>
+          <span class="hull-activity__summary__object">{{object.type}} - {{object.name}}</span>
+          <span class="hull-activity__summary__target">{{target.name}}</span>
+        </h3>
+
+        <div class="hull-activity__content hull-activity__content--{{object.type}}">
+
+          <div class="hull-media">
+            <div class="hull-media__img">
+                {{#target}}
+                  <div class="hull-activity__meta__target hull-activity__meta__target--{{type}}">
+                     <img src="{{imageUrl id "thumb"}}"/>
+                  </div>
+                {{/target}}
+            </div>
+            <div class="hull-media__body">
+               {{#object}}
+                  <div class="hull-activity__content__object">
+                    <img src="{{imageUrl id "original"}}"/>
+                    <h4 class="hull-activity__content__object__name">{{name}}</h4>
+                    <small>{{fromNow published}}</small>
+                    <hr class="hullstrap-compact" />
+                  </div>
+                {{/object}}
+
+                {{#if content}}
+                  <div class="hull-activity__content__content">
+                    {{content}}
+                  </div>
+                {{/if}}
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hull-activity__meta">
+          {{#if target.picture}}
+            <img class="hull-activity__meta__target--icon" src="{{target.picture id "thumb"}}">
+          {{/if}}
+        </div>
+
+      </div>
+
+    </li>
+  {{/activities}}
+  {{#if activities}}
+    <li class="hull-media hull-activity__item">
+      <button data-hull-action="fetchMore" class="hull-btn hull-btn--lrg hull-btn--full">
+        Fetch more...
+      </button>
+    </li>
+  {{/if}}
+</ul>
+
+{{^activities}}
+<div class="hull-empty">
+  No activity yet...
+</div>
+{{/activities}}

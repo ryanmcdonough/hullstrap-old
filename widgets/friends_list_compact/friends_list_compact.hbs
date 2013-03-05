@@ -1,51 +1,57 @@
+{{#if loggedIn}}
+
 {{#if friends}}
-    <div class="row">
-      <div class="page-header">
-        <h1>Friends</h1>
-      </div>
-        <p>Well aren't you popular...</p>
-    </div>
+<div class="row">
+<div class="span3">
     <div class="row">
         {{#friends}}
           <div class="span3">
-          <div class="well">
             <div class="media">
               <a class="pull-left" href="#">
-              <img class="media-object img-polaroid" src="{{picture}}" alt="{{name}}">
+              <img class="media-object img-polaroid" class="img-polaroid" src="{{picture}}" alt="{{name}}">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">{{name}}</h4>
                 <p>Member since {{fromNow created_at}}/p>
             </div>
-            </div>
+            <hr class="hullstrap-compact" />
             </div>
           </div>
         {{/friends}}
     </div>
+    </div>
+    </div>
 {{/if}}
 
 {{^friends}}
+<div class="row">
+<div class="span3">
   <div class="row">
-      <div class="span12">
-      <h3>Oh... no friends :(</h3>
-      <p class="lead">If you had some it'd look a little like this..</p>
+      <div class="span3">
+      <h4>Oh... no friends :(</h4>
+      <p>If you had some it'd look a little like this..</p>
       </div>
   </div>
   <div class="row">
     <div class="span3">
-      <div class="well">
       <div class="media">
       <a class="pull-left" href="#">
-      <img class="media-object img-polaroid" alt="64x64" src="http://placehold.it/64x64">
+      <img class="media-object img-polaroid" class="img-polaroid" alt="64x64" src="http://placehold.it/64x64">
       </a>
       <div class="media-body">
         <h4 class="media-heading">Awesome Name</h4>
         <p>Member since: 02/02/2013</p>
       </div>
-      </div>
+       <hr class="hullstrap-compact" />
       </div>
     </div>
   </div>
-  
+
+</div>
+</div>
 
 {{/friends}}
+
+{{else}}
+  <div data-hull-widget="page_identity"></div>
+{{/if}}

@@ -1,7 +1,7 @@
 /**
- * # Widget `identity`
+ * # Widget `identity_compact`
  *
- * This widget is identified as `page_identity`  
+ * This widget is identified as `identity_compact`  
  * Use it to indicate whether the user is logged in or not, and display login buttons if not.
  *
  */
@@ -10,12 +10,12 @@
   
   /**
    * @name Templates
-   * #### `identity/identity`
+   * #### `identity_compact`
    * 
-   * Displays login buttons or the name of the user, depending on its logged in state
+   * Displays button with login otions or username/picture if logged in
    *
    */
-  templates: ['identity'],
+  templates: ['identity_compact'],
 
   // Which events to refresh the widget on.
   refreshEvents: ['model.hull.me.change'],

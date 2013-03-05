@@ -1,0 +1,40 @@
+<div class="hull-comments">
+
+  <div class="hull-comments__form">
+    {{#if loggedIn}}
+      <textarea class="hull-comments__text" placeholder="Write something..."></textarea>
+      <button data-hull-action="comment" class="hull-btn">Send</button>
+    {{else}}
+      <div data-hull-widget="identity@hull"></div>
+    {{/if}}
+  </div>
+
+  <hr class="hull-rule">
+
+  {{#if comments}}
+    <ul class="hull-comments__list">
+      {{#comments}}
+        <li class="hull-comments__list__item">
+          <div class="hull-media">
+            <div class="hull-media__img">
+              <img src="{{user.picture}}" alt="{{user.name}}">
+            </div>
+            <div class="hull-media__body">
+              <div class="hull-comments__timestamp">{{fromNow updated_at}}</div>
+              <h4 class="hull-comments__name">{{user.name}}</h4>
+              <div class="hull-comments__description">
+                {{description}}
+              </div>
+            </div>
+          </div>
+        </li>
+      {{/comments}}
+    </ul>
+  {{/if}}
+
+  {{^comments}}
+    <div class="hull-empty">
+      oops... no comments for the moment
+    </div>
+  {{/comments}}
+</div>

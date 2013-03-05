@@ -1,0 +1,16 @@
+{{#if loggedIn}}
+    
+{{else}}
+
+<div class="page-header">
+            <h1>Login</h1>
+</div>
+<p>You can put a nice pithy message here about why you need to login...</p>
+		  
+		  
+    <button data-hull-action="login" data-hull-provider="{{.}}" class="btn">
+      Login with {{classify .}}
+    </button>
+  </div>
+ 
+{{/if}}

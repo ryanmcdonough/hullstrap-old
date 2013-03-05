@@ -1,31 +1,49 @@
 {{#if loggedIn}}
-  
-  <ul class="nav pull-right">
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <img src="{{me.picture}}" alt="{{me.name}}" class="user-top-image img-rounded"> {{me.name}}
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu"> 
- 	 		<li><a data-hull-action="logout">Logout</a></li>
-  	  </ul>
-      
-    </li>
-  </ul>
-  
+  <h1>You are logged in, how about that...</h1>
 {{else}}
- <ul class="nav pull-right">
-   <li class="dropdown">
-     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        Login or Sign Up
-       <b class="caret"></b>
-     </a>
-     <ul class="dropdown-menu"> 
-       <li><a data-hull-action='login' data-hull-provider="github"><i class="icon-github"></i> Github</a></li>
- 	  <li><a data-hull-action='login' data-hull-provider="twitter"><i class="icon-twitter"></i> Twitter</a></li>
- 	  </ul>
-      
-   </li>
- </ul>
- 
+
+<div class="row">
+      <div class="page-header">
+        <h1>Login or Sign Up</h1>
+      </div>
+	  
+	  <div class="span4">
+	  <a data-hull-action='login' class="btn btn-medium" data-hull-provider="github"><i class="icon-github"></i> Github</a>
+	  </div>
+	  
+	  <div class="span4">
+	  <a data-hull-action='login' class="btn btn-medium" data-hull-provider="twitter"><i class="icon-twitter"></i> Twitter</a>
+	  </div>
+	 
+	  <div class="span4">
+  
+	  <a data-hull-action='login' class="btn btn-medium" data-hull-provider="facebook"><i class="icon-facebook"></i> Facebook</a>
+	  </div>
+</div>
+
+<hr />
+
+<div class="row">
+	  
+	  <div class="span4">
+	  <h4>An awesome reason..</h4>
+	  <hr />
+	  <p>Cupcake ipsum dolor sit amet wypas ice cream soufflé halvah. Wafer cheesecake sweet roll chocolate marshmallow bear claw gummi bears tart.</p>
+	  </div>
+	  
+	  <div class="span4">
+	  <h4>Another awesome reason..</h4>
+	  <hr />
+	  <p>Cupcake ipsum dolor sit amet wypas ice cream soufflé halvah. Wafer cheesecake sweet roll chocolate marshmallow bear claw gummi bears tart.</p>
+	  
+	  </div>
+	 
+	  <div class="span4">
+  <h4>One other awesome reason..</h4>
+  <hr />
+  <p>Cupcake ipsum dolor sit amet wypas ice cream soufflé halvah. Wafer cheesecake sweet roll chocolate marshmallow bear claw gummi bears tart.</p>
+  
+	  </div>
+</div>
+  
 {{/if}}
