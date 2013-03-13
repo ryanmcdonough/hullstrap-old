@@ -1,5 +1,5 @@
-hullstrap
-=========
+hullstrap 0.2
+=============
 
 making hull a little easier
 
@@ -9,9 +9,10 @@ So far:
 
   -Identity (Full page & compact button)
   -Friends (Full page & compact friends list)
+  -Comments and Commenting (On activities)
   -Activity (Full page & compact list)
+  -Lists (Full page)
+  -Share & Like Buttons
 
-
-At the bottom of each .html file make sure to add your App ID and link.
 
 Feel free to pull, push and do whatever you want to improve this.
