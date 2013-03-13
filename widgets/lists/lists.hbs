@@ -1,55 +1,54 @@
-<div class="hull-lists">
-
 {{#if loggedIn}}
-  <div class="hull-lists__header">
-    <h1>My lists</h1>
-  </div>
-
   {{#lists}}
-    <h3 class="hull-lists__title">{{name}}</h3>
+  <div class="row-fluid">
+    <div class="span12">
+    <h3>{{name}}</h3>
 
-    <ul class="hull-lists__items">
+    <ul>
       {{#items}}
-        <li>
-          <p>
+        <li>         
             <span class="hull-loz">{{type}}</span> <strong>{{name}}</strong> {{description}}
-          </p>
         </li>
       {{/items}}
       {{^items}}
         <li>
-          <div class="hull-empty">
             Empty Collection
-          </div>
         </li>
       {{/items}}
     </ul>
+    </div>
+    </div>
   {{/lists}}
   {{^lists}}
     <div class="hull-empty">
-      oops... no lists for the moment
+      <h4>oops... no lists for the moment</h4>
     </div>
   {{/lists}}
 
+    <div class="row-fluid">
+    <div class="span2">
+      <button id="createListShow" class="btn btn-success">Create a New List</button>
+    </div>
 
-  <h1 class="hull-lists__form__title">Create a new List</h1>
-  <form class="hull-form hull-lists__form">
-    <ul class="hull-form__fields">
-      <li>
-        <label class="hull-form__label" for="name">Name:</label>
-        <input class="hull-form__text-input" type="text" name="name">
-      </li>
-      <li>
-        <label class="hull-form__label" for="description">Description:</label>
-        <input class="hull-form__text-input" type="text" name="description">
-      </li>
-      <li class="hull-lists__form__submit">
-        <input type="submit" class="hull-btn">
-      </li>
-    </ul>
-  </form>
+    </div>
+
+        <div id="createListForm" class="row-fluid hide">
+    <div class="span12">
+      <h3 class="hull-lists__form__title">Add Item</h3>
+  <hr />
+
+  <form>
+    <label>Name:</label>
+    <input name="name" type="text" placeholder="Type something…">
+    <label for="description">Description:</label>
+    <input type="text" name="description">
+    <hr />
+    <input type="submit" class="btn btn-submit">
+</form>
+    </div>
+
+    </div>
 
 {{else}}
-  <div data-hull-widget="identity@hull"></div>
+  <div data-hull-widget="identity"></div>
 {{/if}}
-</div>

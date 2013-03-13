@@ -1,41 +1,124 @@
-.hullstrap-header {
-	height:230px;
-	background: #2d4a84; /* Old browsers */
-	background: -moz-linear-gradient(top, #2d4a84 0%, #356aa0 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2d4a84), color-stop(100%,#356aa0)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #2d4a84 0%,#356aa0 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #2d4a84 0%,#356aa0 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #2d4a84 0%,#356aa0 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #2d4a84 0%,#356aa0 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d4a84', endColorstr='#356aa0',GradientType=0 ); /* IE6-9 */
-}
-
-.hullstrap-header h1 { 
-	margin-top:35px;
-	color:#FFF;
-}
-
-.hullstrap-header h2 { 
-	margin-top:35px;
-	color:#FFF;
-}
-
-.hullstrap-content {
-	margin-top:20px;
-}
-
-.user-top-image {
-	height:22px;
-	width:22px;
+body {
+	background: #efefef;
+	background-image: url("../img/rough_diagonal.png");
 }
 
 h1,h2,h3,h4,h5 {
-	font-family: 'Open Sans', sans-serif;
+	color:#6C6662;
+    font-family: PT Sans;
+    font-weight: normal;
 }
 
-.hullstrap-compact hr {
-  margin: 5px 0;
+.user-top-image {
+	height:23px;
+	width:23px;
+}
+.hullstrap-brand {
+	color:#000;
+}
+
+.hullstrap-box {
+    background:#fff;
+    box-shadow:none;
+    border:1px solid #ddd;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    padding:15px;
+    margin-top:15px;
+    margin-bottom:30px;
+	  box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+.hullstrap-activity-box {
+    border:1px solid #ddd;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+
+          padding: 5px 5px 5px 10px;
+          margin-bottom:15px;
+}
+
+.hullstrap-activity-box hr {
+  margin: 8px 0;
   border: 0;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;
+}
+
+.hullstrap-activity-box_compact  {
+    margin-bottom:5px;
+}
+
+.hullstrap-activity-box_compact hr {
+  margin: 3px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+.hullstrap-activity-box textarea {
+width:90%;
+}
+
+.hullstrap-friend-box {
+    border:1px solid #ddd;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+
+          padding: 5px 5px 5px 10px;
+          margin-bottom:5px;
+}
+
+.hullstrap-friend-box_compact  {
+    padding-left:10px;
+    margin-bottom:5px;
+}
+
+.hullstrap-friend-box_compact hr {
+  margin: 3px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+.hullstrap-friend-box_compact [class*="span"] {
+    min-height:5px;
+}
+
+.hullstrap-friend-box_compact p {
+  margin: 0 0 2px;
+}
+
+.hullstrap-comment-box {
+    margin-bottom:10px;
+}
+
+.hullstrap-twitter-colour {
+    color:#4099FF;
+}
+
+.hullstrap-twitter-btn { text-shadow: 0px -1px 0px #168be1; color: #ffffff; background-color: #34A9FF; background-image: -moz-linear-gradient(top, #52c7ff, #168be1); background-image: -ms-linear-gradient(top, #52c7ff, #168be1); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#52c7ff), to(#168be1)); background-image: -webkit-linear-gradient(top, #52c7ff, #168be1); background-image: -o-linear-gradient(top, #52c7ff, #168be1); background-image: linear-gradient(top, #52c7ff, #168be1); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52c7ff', endColorstr='#168be1', GradientType=0); border-color: #34A9FF #168be1 #168be1 #34A9FF; border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.25); }
+.hullstrap-twitter-btn:hover, .hullstrap-twitter-btn:active, .hullstrap-twitter-btn.active, .hullstrap-twitter-btn.disabled, .hullstrap-twitter-btn[disabled] { background-color: #168be1; }
+.hullstrap-twitter-btn:hover { color: #fcffff; text-shadow: 0px -1px 0px #006dc3; }
+.hullstrap-twitter-btn:focus { color: #98ffff; -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); border-color: #34A9FF #168be1 #168be1 #34A9FF; border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.25); }
+.hullstrap-twitter-btn.active, .hullstrap-twitter-btn:active { background-image: none; -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); color: #98ffff; }
+
+
+.hullstrap-facebook-colour {
+    color:#3B5998;
 }

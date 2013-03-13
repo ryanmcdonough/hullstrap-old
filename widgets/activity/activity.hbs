@@ -7,82 +7,45 @@
       </ul>
     </div>
   <hr />
-  <div class="hull-pager__query">
-  <h4>For debug</h4>
-  <hr />
-      <span>{{query.page}}</span>
-      <span>VERB ?: {{query.where.verb}}</span>
-      <span>ObjectType ?: {{query.where.obj_type}}</span>
-      <pre>{{json query}}</pre>
-  </div>
+  
 </div>
 
-<ul class="hull-activity">
+
   {{#activities}}
-    <li class="hull-media hull-activity__item hull-activity__item--{{verb}}">
+  <div class="row-fluid">
+  <div class="span2">
       {{#if actor.picture}}
-        <div class="hull-media__img">
-            <img src="{{actor.picture}}"/>
-        </div>
+            <img src="{{actor.picture}}" class="img-rounded"/>
       {{/if}}
-      <div class="hull-media__body">
+  </div>
 
-        <h3 class="hull-activity__summary">
-          <span class="hull-activity__summary__actor">{{actor.name}}</span>
-          <span class="hull-activity__summary__verb">{{verb}}</span>
-          <span class="hull-activity__summary__object">{{object.type}} - {{object.name}}</span>
-          <span class="hull-activity__summary__target">{{target.name}}</span>
-        </h3>
 
-        <div class="hull-activity__content hull-activity__content--{{object.type}}">
+      <div class="span10 hullstrap-activity-box">
+        <h5>{{actor.name}} {{verb}}  {{object.type}} - {{object.name}} <small>{{fromNow published}}</small></h5>
+        <hr />
+         {{#object}}
+             <img src="{{imageUrl id "original"}}"/>
+             <p>{{name}}</p>              
+         {{/object}}
 
-          <div class="hull-media">
-            <div class="hull-media__img">
-                {{#target}}
-                  <div class="hull-activity__meta__target hull-activity__meta__target--{{type}}">
-                     <img src="{{imageUrl id "thumb"}}"/>
-                  </div>
-                {{/target}}
-            </div>
-            <div class="hull-media__body">
-               {{#object}}
-                  <div class="hull-activity__content__object">
-                    <img src="{{imageUrl id "original"}}"/>
-                    <h4 class="hull-activity__content__object__name">{{name}}</h4>
-                    <small>{{fromNow published}}</small>
-                    <hr class="hullstrap-compact" />
-                  </div>
-                {{/object}}
-
-                {{#if content}}
-                  <div class="hull-activity__content__content">
-                    {{content}}
-                  </div>
-                {{/if}}
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class="hull-activity__meta">
-          {{#if target.picture}}
-            <img class="hull-activity__meta__target--icon" src="{{target.picture id "thumb"}}">
+          {{#if content}}
+               {{content}}
+          
           {{/if}}
-        </div>
 
-      </div>
+    </div>
+  </div>
 
-    </li>
   {{/activities}}
   {{#if activities}}
-    <li class="hull-media hull-activity__item">
-      <button data-hull-action="fetchMore" class="hull-btn hull-btn--lrg hull-btn--full">
+  <div class="row-fluid"> 
+  <div class="span2 offset5">
+      <button data-hull-action="fetchMore" class="btn btn-large">
         Fetch more...
       </button>
-    </li>
+  </div>      
+  </div>
   {{/if}}
-</ul>
 
 {{^activities}}
 <div class="hull-empty">

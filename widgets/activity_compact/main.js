@@ -40,6 +40,46 @@ define({
     }
   },
 
+    translations: {
+    verb: {
+      view: 'watched',
+      receive: 'received',
+      share: 'shared',
+      add: 'added',
+      post: 'posted',
+      like: 'liked',
+      create: 'created'
+    },
+    object: {
+      image: 'an image',
+      status: 'a status',
+      photo: 'a photo',
+      question: 'a question',
+      item: 'an objet',
+      badge: 'a badge',
+      link: 'a link',
+      video: 'a video',
+      note: 'a rating',
+      comment: 'a comment',
+      review: 'a review'
+    },
+    target: {
+      facebook_wall: 'Facebook',
+      facebook: 'Facebook',
+      twitter: 'Twitter',
+      youtube: 'Youtube',
+      github: 'Github',
+      on: 'on'
+    },
+    target_icon: {
+      facebook_wall: "/assets/images/social/facebook.png",
+      facebook: "/assets/images/social/facebook.png",
+      twitter: "/assets/images/social/twitter.png",
+      google: "/assets/images/social/youtube.png",
+      youtube: "/assets/images/social/youtube.png"
+    },
+
+
   initialize: function() {
     var query = {};
 

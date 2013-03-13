@@ -30,47 +30,54 @@
 		<div class="span10 offset1 hullstrap-box">
 			<div class="row-fluid">
 				<div class="page-header">
-				      <h2>So what do we have...?</h2>
-					  <div class="alert alert-info">
-						  <p><strong>As of this release the static html pages are examples of output rather than live results.</strong></p>
-						  <p>Each page notes where in the widget folders each of the examples are located.</p>
-					  </div>
+				      <h2>Misc</h2>
 				 </div>
-				 <div class="span4">
-					 <h3>Identity</h3>
-					 <hr />
-					 <p>Both a full size &amp; nav bar sized identity widget available.</p>
-					 <p><a href="identity.html">View Now</a></p>
-				 </div>
-				 <div class="span4">
-					 <h3>Friends</h3>
-					 <hr />
-					 <p>We've bootstrapped &amp; compacted your friends. In a good way.
-					 </p>
-					  <p><a href="friends.html">View Now</a></p>
-				 </div>
-				 <div class="span3">
-					 <h3>Activity</h3>
-					 <hr />
-					 
-					 <p>We've timelined the activity feed, including Comments</p>
-					  <p><a href="activity.html">View Now</a></p>
-				 </div>
-				 <div class="span11">
-					 <hr />
-				 </div>
-				 <div class="span4">
-					 <h3>Lists</h3>
-					 <hr />
-					 <p>Strapped up lists, also fade in form for adding to lists.</p>
-					 <p><a href="lists.html">View Now</a></p>
-				 </div>
-				 <div class="span4">
-					 <h3>Misc</h3>
-					 <hr />
-					 <p>Like Buttons & Sharing - More small items to come.</p>
-					 <p><a href="misc.html">View Now</a></p>
-				 </div>
+				
+		 		<div class="span4">
+	
+
+		 			<div class="row-fluid">
+		 				<h3>Like Button</h3>
+		 					<hr />
+		 				<div class="hull-like">
+		     <button data-hull-action="unlike" class="btn">
+		       <i class='icon-heart'></i>
+		       Unike
+		     </button>
+
+		     <button data-hull-action="like" class="btn">
+		       <i class='icon-heart-empty'></i>
+		       Like
+		     </button>
+		 </div>
+			
+		 			</div>
+		 				</div>
+
+		 						<div class="span4">
+	
+
+		 			<div class="row-fluid">
+		 				<h3>Share</h3>
+		 				<hr />
+		 				<a class="btn hullstrap-twitter-btn" href="https://twitter.com/share?text={{text}}&url={{url}}" target="_blank"><i class='icon-twitter'></i> Share to Twitter</a>
+
+
+			
+		 			</div>
+		 				</div>
+						
+			   		 <div class="row-fluid">
+			   		 		<div class="span12">
+			   		 			<hr />
+			   		 			<p>Like Widget: /widgets/like_button</p>
+			   		 			<p>Share Widget: /widgets/share/twitter</p>
+			   		 		</div>
+	
+				 
+				
+			   			 </div>
+				 
 			</div>
 		</div>
 	</div>
@@ -80,7 +87,7 @@
 			<div class="row-fluid">
 				<div class="span8">
 					<small>a project by <a href="http://twitter.com/ryanmcdonough">@ryanmcdonough</a>, based on the awesome work by <a href="http://twitter.com/hull">@hull</a></small>
-					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -89,6 +96,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
   <script src="assets/js/bootstrap.min.js" type="text/javascript"></script> 
   <script src="assets/js/truncate.js" type="text/javascript"></script> 
+  <script src="assets/js/autogrow.js" type="text/javascript"></script> 
 
   <script src="https://hull-js.s3.amazonaws.com/0.2.0/hull.js" type="text/javascript"></script>
 <script>
@@ -97,6 +105,7 @@
 	      orgUrl: "",
     debug : true // optional
   });
+  
 </script>
 
 

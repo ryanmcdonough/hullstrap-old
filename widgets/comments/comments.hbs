@@ -1,40 +1,39 @@
-<div class="hull-comments">
-
-  <div class="hull-comments__form">
-    {{#if loggedIn}}
-      <textarea class="hull-comments__text" placeholder="Write something..."></textarea>
-      <button data-hull-action="comment" class="hull-btn">Send</button>
-    {{else}}
-      <div data-hull-widget="identity@hull"></div>
-    {{/if}}
-  </div>
-
-  <hr class="hull-rule">
+  <hr />
 
   {{#if comments}}
-    <ul class="hull-comments__list">
       {{#comments}}
-        <li class="hull-comments__list__item">
-          <div class="hull-media">
-            <div class="hull-media__img">
-              <img src="{{user.picture}}" alt="{{user.name}}">
-            </div>
-            <div class="hull-media__body">
-              <div class="hull-comments__timestamp">{{fromNow updated_at}}</div>
-              <h4 class="hull-comments__name">{{user.name}}</h4>
-              <div class="hull-comments__description">
-                {{description}}
-              </div>
-            </div>
-          </div>
-        </li>
+      <div class="row-fluid hullstrap-comment-box">
+        
+        <div class="span2">
+          <img src="{{user.picture}}" alt="{{user.name}}" class="img-rounded">
+        </div>
+
+        <div class="span10 hullstrap-activity-box">
+          <h5>{{user.name}} <small>{{fromNow updated_at}}</small></h5>
+          <p>{{description}}</p>
+        </div>        
+
+      </div>
       {{/comments}}
-    </ul>
   {{/if}}
 
   {{^comments}}
-    <div class="hull-empty">
-      oops... no comments for the moment
-    </div>
+
   {{/comments}}
+
+  {{#if loggedIn}}
+          <div class="row-fluid">
+          <div class="span11">
+          <hr />
+          </div>
+          <div class="span9">
+            <textarea class="comment-box" rows="1" placeholder="Comment on this..."></textarea>
+    
+          </div>
+          <div class="span2">
+              <button data-hull-action="comment" class="btn">Comment</button>
+          </div>
+    {{else}}
+      <div data-hull-widget="identity_compact"></div>
+    {{/if}}
 </div>
