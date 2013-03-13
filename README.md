@@ -3,6 +3,8 @@ hullstrap 0.2
 
 making hull a little easier
 
+DEMO: http://ryanmcdonough.co.uk/hullstrap/index.html
+
 A boostrap based, with hull integration. Includes all hull widgets in the widgets folder, easily customisable.
 
 So far:
