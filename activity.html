@@ -10,187 +10,68 @@
   <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/bootstrap-responsive.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
-
-  <!--[if lt IE 7]><link rel="stylesheet" href="assets/css/bootstrap-ie6.min.css"><![endif]-->
+  
   <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-
 <body>
-  <div class="container hullstrap-header">
-    <div class="span8 offset2 pagination-centered">
-      <h1><span class="hullstrap-brand">hullstrap</span>, making hull a bit easier</h1>
 
-      <h2><small>though, it's pretty easy already</small></h2>
-    </div>
-  </div>
+	<div class="hullstrap-header">
+		<div class="navbar navbar-inverse navbar-static-top">
+		      <div class="navbar-inner">
+		        <div class="container">
+		          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="brand" href="index.html">hullstrap</a>
+		          <div class="nav-collapse collapse">
+		            <ul class="nav">
+		              <li><a href="index.html">Home</a></li>
+		              <li><a href="friends.html">Friend List</a></li>
+		              <li><a href="activity.html">Activity</a></li>
+          			  <li><a href="identity.html">Identity</a></li>
+					   <li><a href="lists.html">Lists</a></li>
+					   			    <li><a href="misc.html">Misc</a></li>
+		            </ul>
+		            <div data-hull-widget="identity_compact"></div>
+		          </div><!--/.nav-collapse -->
+		        </div>
+		      </div>
+		    </div>
 
-  <div class="container">
-    <div class="span10 offset1 hullstrap-box">
-      <div class="row-fluid">
-        <div class="page-header">
-          <h2>Activity</h2>
-        </div>
+		<div class="container">
+			<div class="span8 offset2 pagination-centered">
+				<h1>activities</h1>
+				<h2>there's lots of room for activities</h2>
+			</div>
+		</div>
+	</div>
 
-        <div class="row-fluid">
-          <div class="span7">
-            <div class="row-fluid">
-              <div class="span2"><img src="http://hull.io/images/team/stephane.jpg" class=
-              "img-rounded" /></div>
+	<div class="container hullstrap-content">
+		<div class="row">
+			<div class="span12">
+				<div data-hull-widget="activity"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<hr />
+				<p>Full sized: /widgets/activity/</p>
+				<p>Compact sized: /widgets/activity_compact/</p>
+			</div>
+		</div>
+	</div>
+   
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script> 
+	<script src="assets/js/truncate.js" type="text/javascript"></script> 
 
-              <div class="span10 hullstrap-activity-box">
-                <h5>Stephane posted <small>about 20 minutes ago</small></h5>
-                <hr />
+	<script src="https://hull-js.s3.amazonaws.com/0.2.0/hull.js" type="text/javascript"></script>
+	<script src="assets/js/app.js" type="text/javascript"></script> 
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis
-                commodo ipsum id vulputate. Duis semper porta ipsum. Aliquam non
-                ullamcorper ante.</p>
-
-                <div class="row-fluid hullstrap-comment-box">
-                  <div class="span2"><img src="http://hull.io/images/team/jimmy.jpg" alt=
-                  "{{user.name}}" class="img-rounded" /></div>
-
-                  <div class="span10">
-                    <strong>Jimmy commented</strong> <small>20 seconds ago</small>
-
-                    <p>Wow I'm loving this!</p>
-                  </div>
-                </div>
-
-                <div class="row-fluid hullstrap-comment-box">
-                  <div class="span2"><img src="assets/img/demo/ryan.jpeg" alt=
-                  "{{user.name}}" class="img-rounded" /></div>
-
-                  <div class="span10">
-                    <strong>Ryan commented</strong> <small>1 minute ago</small>
-
-                    <p>Hey this is cool.</p>
-                  </div>
-                </div>
-
-                <div class="row-fluid">
-                  <div class="span11">
-                    <hr />
-                  </div>
-
-                  <div class="span8">
-                    <textarea class="comment-box" rows="1" placeholder=
-                    "Comment on this...">
-</textarea>
-                  </div>
-
-                  <div class="span3">
-                    <button data-hull-action="comment" class="btn">Comment</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row-fluid">
-              <div class="span2"><img src="http://hull.io/images/team/victor.jpg" class=
-              "img-rounded" /></div>
-
-              <div class="span10 hullstrap-activity-box">
-                <h5>Victor uploaded a photo <small>about 20 minutes ago</small></h5>
-                <hr />
-                <img src="http://lorempixel.com/500/200/nature/" />
-
-                <div class="row-fluid">
-                  <div class="span11">
-                    <hr />
-                  </div>
-
-                  <div class="span8">
-                    <textarea class="comment-box" rows="1" placeholder=
-                    "Comment on this...">
-</textarea>
-                  </div>
-
-                  <div class="span3">
-                    <button data-hull-action="comment" class="btn">Comment</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="span4">
-            <div class="row-fluid">
-              <div class="span2"><img src="assets/img/demo/rom.jpeg" class=
-              "img-rounded" /></div>
-
-              <div class="span10 hullstrap-activity-box_compact">
-                <strong>Romain posted</strong>
-
-                <p class="activity-small">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Ut convallis commodo ipsum id vulputate.</p>
-                <hr />
-                <small class="pull-right">about 10 minutes ago</small>
-              </div>
-            </div>
-
-            <div class="row-fluid">
-              <div class="span2"><img src="assets/img/demo/xav.jpeg" class=
-              "img-rounded" /></div>
-
-              <div class="span10 hullstrap-activity-box_compact">
-                <strong>Xavier commented</strong>
-
-                <p class="activity-small">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Ut convallis commodo ipsum id vulputate.</p>
-                <hr />
-                <small class="pull-right">about 20 minutes ago</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row-fluid">
-          <div class="span12">
-            <hr />
-
-            <p>Compact Widget: /widgets/activity_compact</p>
-
-            <p>Full Widget: /widgets/activity</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="span10 offset1">
-        <div class="row-fluid">
-          <div class="span8">
-            <small>a project by <a href=
-            "http://twitter.com/ryanmcdonough">@ryanmcdonough</a>, based on the awesome
-            work by <a href="http://twitter.com/hull">@hull</a></small>
-          </div>
-        </div>
-      </div>
-    </div><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
-    type="text/javascript">
-</script> <script src="assets/js/bootstrap.min.js" type="text/javascript">
-</script> <script src="assets/js/truncate.js" type="text/javascript">
-</script> <script src="assets/js/autogrow.js" type="text/javascript">
-</script> <script src="https://hull-js.s3.amazonaws.com/0.2.0/hull.js" type=
-"text/javascript">
-</script> <script type="text/javascript">
-//<![CDATA[
-    Hull.init({
-          appId : "",
-              orgUrl: "",
-    debug : true // optional
-    });
-
-    $('.activity-small').trunk8();
-    $('.comment-box').autogrow();
-
-    $("#createListShow").click(function () {
-         $('#createListForm:hidden').fadeIn("slow");
-      
-    });
-
-    //]]>
-    </script>
-  </div>
+	
 </body>
 </html>

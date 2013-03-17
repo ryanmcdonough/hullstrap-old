@@ -10,104 +10,74 @@
   <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/bootstrap-responsive.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
-
-  <!--[if lt IE 7]><link rel="stylesheet" href="assets/css/bootstrap-ie6.min.css"><![endif]-->
+  
   <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-
 <body>
-  
 
-    <div class="container hullstrap-header">
-      <div class="span8 offset2 pagination-centered">
-       
-        <h1><span class="hullstrap-brand">hullstrap</span>, making hull a bit easier</h1>
-		<h2> <small>though, it's pretty easy already</small></h2>
-      </div>
-    </div>
-  
-  	<div class="container">
-		<div class="span10 offset1 hullstrap-box">
-			<div class="row-fluid">
-				<div class="page-header">
-				      <h2>Misc</h2>
-				 </div>
-				
-		 		<div class="span4">
-	
+	<div class="hullstrap-header">
+		<div class="navbar navbar-inverse navbar-static-top">
+		      <div class="navbar-inner">
+		        <div class="container">
+		          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="brand" href="index.html">hullstrap</a>
+		          <div class="nav-collapse collapse">
+		            <ul class="nav">
+		              <li><a href="index.html">Home</a></li>
+		              <li><a href="friends.html">Friend List</a></li>
+		              <li><a href="activity.html">Activity</a></li>
+          			  <li><a href="identity.html">Identity</a></li>
+					   <li><a href="lists.html">Lists</a></li>
+					    <li><a href="misc.html">Misc</a></li>
+		            </ul>
+		            <div data-hull-widget="identity_compact"></div>
+		          </div><!--/.nav-collapse -->
+		        </div>
+		      </div>
+		    </div>
 
-		 			<div class="row-fluid">
-		 				<h3>Like Button</h3>
-		 					<hr />
-		 				<div class="hull-like">
-		     <button data-hull-action="unlike" class="btn">
-		       <i class='icon-heart'></i>
-		       Unike
-		     </button>
-
-		     <button data-hull-action="like" class="btn">
-		       <i class='icon-heart-empty'></i>
-		       Like
-		     </button>
-		 </div>
-			
-		 			</div>
-		 				</div>
-
-		 						<div class="span4">
-	
-
-		 			<div class="row-fluid">
-		 				<h3>Share</h3>
-		 				<hr />
-		 				<a class="btn hullstrap-twitter-btn" href="https://twitter.com/share?text={{text}}&url={{url}}" target="_blank"><i class='icon-twitter'></i> Share to Twitter</a>
-
-
-			
-		 			</div>
-		 				</div>
-						
-			   		 <div class="row-fluid">
-			   		 		<div class="span12">
-			   		 			<hr />
-			   		 			<p>Like Widget: /widgets/like_button</p>
-			   		 			<p>Share Widget: /widgets/share/twitter</p>
-			   		 		</div>
-	
-				 
-				
-			   			 </div>
-				 
-			</div>
-		</div>
-	</div>
-	
-	<div class="container">
-		<div class="span10 offset1">
-			<div class="row-fluid">
-				<div class="span8">
-					<small>a project by <a href="http://twitter.com/ryanmcdonough">@ryanmcdonough</a>, based on the awesome work by <a href="http://twitter.com/hull">@hull</a></small>
-				</div>
+		<div class="container">
+			<div class="span8 offset2 pagination-centered">
+				<h1>misc</h1>
+				<h2>they are small, but cool</h2>
 			</div>
 		</div>
 	</div>
 
+	<div class="container hullstrap-content">
+		<div class="row">
+			<div class="span12">
+				<h4>Like/Unlike Button</h4>
+				<p>Full sized: /widgets/like_button/</p>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script> 
-  <script src="assets/js/truncate.js" type="text/javascript"></script> 
-  <script src="assets/js/autogrow.js" type="text/javascript"></script> 
+				<hr />
+				<div data-hull-widget="like_button"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="span12">
+				<h4>Share (Twitter)</h4>
+				<p>Full sized: /widgets/share/</p>
+				<hr />
+				<div data-hull-widget="share"></div>
+			</div>
+		</div>
+	</div>
+   
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script> 
+	<script src="assets/js/truncate.js" type="text/javascript"></script> 
 
-  <script src="https://hull-js.s3.amazonaws.com/0.2.0/hull.js" type="text/javascript"></script>
-<script>
-  Hull.init({
-	  appId : "",
-	      orgUrl: "",
-    debug : true // optional
-  });
-  
-</script>
+	<script src="https://hull-js.s3.amazonaws.com/0.2.0/hull.js" type="text/javascript"></script>
+	<script src="assets/js/app.js" type="text/javascript"></script> 
 
-
+	
 </body>
 </html>

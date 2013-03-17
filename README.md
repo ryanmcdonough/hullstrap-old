@@ -1,4 +1,4 @@
-hullstrap 0.2
+hullstrap 0.2.1
 =============
 
 making hull a little easier

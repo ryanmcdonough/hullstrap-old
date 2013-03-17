@@ -23,7 +23,6 @@
  * @TODO Don't use DOM events, use widget acions instead
  */
 define({
-  type: "Hull",
   templates: ['lists'],
   events: { 'submit form' : 'createList' },
 

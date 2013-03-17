@@ -1,8 +1,5 @@
-$(document).ready(function() {
-
-	//Truncate the compact actvity feed to one line
-	$('.hullstrap-activity-compact').trunk8({
-		lines: 1
-	});
-
-});
+Hull.init({
+   appId : "512906e929871df7ab000020",
+   orgUrl: "http://lessons.alpha.hullapp.io",
+   debug : true // optional
+ });
