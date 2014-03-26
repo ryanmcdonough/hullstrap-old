@@ -1,20 +1,6 @@
-hullstrap 0.2.1
+hullstrap
 =============
 
-making hull a little easier
+Please use: https://github.com/hull/hullstrap
 
-A boostrap base, with hull integration. Includes all hull widgets in the widgets folder, easily customisable.
-
-So far:
-
-  -Identity (Full page & compact button)
-  -Friends (Full page & compact friends list)
-  -Comments and Commenting (On activities)
-  -Activity (Full page & compact list)
-  -Lists (Full page)
-  -Share & Like Buttons
-
-
-Feel free to pull, push and do whatever you want to improve this.
-
-Just add your hull setting details into the app.js file
+I'm currently working on a version of the above to migrate to bootstrap 3.
